@@ -7,7 +7,9 @@
     "dev": "webpack-dev-server --config ./config/webpack.dev.js --open --hot",
     "start": "npm run dev",
     "build": "webpack --config ./config/webpack.prod.js",
-    "serve": "npm run build && node server.js"
+    "serve": "npm run build && node server.js",
+    "test": "jest --coverage",
+    "watch": "jest --watch"
   },
   "repository": {
     "type": "git",
