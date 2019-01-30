@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/ekpangmichael/Fast-food-fast-react#readme",
   "dependencies": {
+    "@babel/plugin-transform-runtime": "^7.2.0",
     "axios": "^0.18.0",
     "dotenv": "^6.2.0",
     "express": "^4.16.4",
@@ -30,6 +31,8 @@
     "react-dom": "^16.6.3",
     "react-redux": "^6.0.0",
     "react-router-dom": "^4.3.1",
+    "react-spinners": "^0.5.1",
+    "react-toastify": "^4.5.2",
     "redux": "^4.0.1",
     "redux-thunk": "^2.3.0"
   },

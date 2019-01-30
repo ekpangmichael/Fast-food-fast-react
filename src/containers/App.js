@@ -6,6 +6,8 @@ import SignUp from '../components/signup/SignUp';
 import Header from '../components/header/Header';
 import Footer from '../components/footer/Footer';
 import store from '../store';
+import SignIn from '../components/signin/Signin';
+
 class App extends Component {
   render() {
     return (
@@ -16,6 +18,7 @@ class App extends Component {
               <Header />
               <Route path="/" exact component={HomePage} />
               <Route path="/signup" exact component={SignUp} />
+              <Route path="/signin" exact component={SignIn} />
               <Footer />
             </div>
           </BrowserRouter>

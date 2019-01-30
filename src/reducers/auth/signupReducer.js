@@ -1,21 +1,33 @@
-import { FETCH_POSTS, NEW_POST } from '../../actions/actionTypes';
+import * as actionTypes from '../../actions/authActions/actionTypes';
 
 const initialState = {
-  items: [],
-  item: {}
+  isLoading: false,
+  response: null,
+  error: false,
+  class: null
 };
 
 const reducer = (state = initialState, action) => {
   switch (action.type) {
-    case FETCH_POSTS:
+    case actionTypes.SIGNUP_USER_START:
       return {
         ...state,
-        items: action.payload
+        isLoading: true
       };
-    case NEW_POST:
+    case actionTypes.SIGNUP_USER_SUCCESS:
       return {
         ...state,
-        item: action.payload
+        isLoading: false,
+        class: 'success',
+        response: action.payload[1].message
+      };
+    case actionTypes.SIGNUP_USER_FAILURE:
+      return {
+        ...state,
+        isLoading: false,
+        response: action.payload.response.data[1].message,
+        error: true,
+        class: 'fail'
       };
     default:
       return state;

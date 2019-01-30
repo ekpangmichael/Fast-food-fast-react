@@ -141,15 +141,23 @@ header a:hover {
   font-weight: bold;
 }
 .success {
-  color: #4caf50;
+  padding: 10px;
+  background-color: #4caf50; /* green*/
+  color: white;
+  margin: 10px 0 10px 0;
+  width: 85%;
 }
 .fail {
-  color: #ef0a0a;
+  padding: 10px;
+  background-color: #f82f21; /* Red */
+  color: white;
+  margin: 10px 0 10px 0;
+  width: 85%;
 }
 /*banner*/
 #banner {
   min-height: 400px;
-  background: url("https://res.cloudinary.com/weezyval/image/upload/c_scale,w_2000/v1535674062/fastfood/banner.jpg")
+  background: url('https://res.cloudinary.com/weezyval/image/upload/c_scale,w_2000/v1535674062/fastfood/banner.jpg')
     no-repeat;
   text-align: center;
   color: #ffffff;
