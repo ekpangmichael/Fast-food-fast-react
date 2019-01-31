@@ -22,7 +22,7 @@ After that start or build the application by running
 
 ```bash
   npm start # For a production
-  npm run start:dev # For local development
+  npm run dev # For local development
 ```
 
 ## Running the tests

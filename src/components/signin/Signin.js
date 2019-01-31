@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import { connect } from 'react-redux';
-import { signUpUser } from '../../actions/authActions/signup';
+import { signinUser } from '../../actions/authActions/signin';
 import { ClipLoader } from 'react-spinners';
 
 export class SignIn extends Component {
@@ -20,7 +20,7 @@ export class SignIn extends Component {
       password: this.state.password
     };
 
-    this.props.signUpUser(userData);
+    this.props.signinUser(userData, this.props.history);
   };
 
   render() {
@@ -60,12 +60,17 @@ export class SignIn extends Component {
                 </div>
 
                 {!this.props.isLoading ? (
-                  <input
-                    className="button signup-btn-size"
-                    type="submit"
-                    defaultValue="Submit"
-                    id="btn"
-                  />
+                  <div>
+                    <div className={this.props.class}>
+                      {this.props.response}
+                    </div>
+                    <input
+                      className="button signup-btn-size"
+                      type="submit"
+                      defaultValue="Login"
+                      id="btn"
+                    />
+                  </div>
                 ) : (
                   <center>
                     <ClipLoader
@@ -85,9 +90,9 @@ export class SignIn extends Component {
   }
 }
 const mapStateToProps = (state) => ({
-  ...state.signup
+  ...state.signin
 });
 export default connect(
   mapStateToProps,
-  { signUpUser }
+  { signinUser }
 )(SignIn);
