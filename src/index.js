@@ -1,9 +1,14 @@
 import React from 'react';
-import {render} from 'react-dom';
-
+import ReactDOM from 'react-dom';
 import App from './containers/App';
 import './assets/scss/base.scss';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
-
-render(<App/>, 
-  document.querySelector("#root"));
+ReactDOM.render(
+  <div>
+    <ToastContainer />
+    <App />
+  </div>,
+  document.querySelector('#app')
+);
