@@ -11,34 +11,8 @@ class HomePage extends Component {
             <p> ...Chops - The fastest way to your stomach</p>
           </div>
         </section>
-        <section className="food-items">
+        {/* <section className="food-items">
           <div className="container">
-            <aside id="cart">
-              <h3 className="header-bg">Your Order</h3>
-              <div>
-                <table className="table table-hover table-bordered">
-                  <tbody id="cartItems" />
-                  <tbody>
-                    <tr id="checkout">
-                      <td />
-                      <td>
-                        <h3>
-                          <strong>Total</strong>
-                        </h3>
-                      </td>
-                      <td id="total-price">0</td>
-                      <td>
-                        <span className="button">
-                          <Link to="">CHECKOUT</Link>
-                        </span>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-                <br />
-                <br />
-              </div>
-            </aside>
             <div className="category" id="popular">
               <div className="header-bar">
                 <h2> Popular Meals</h2>
@@ -81,19 +55,83 @@ class HomePage extends Component {
               </div>
             </div>
           </div>
-        </section>
+        </section> */}
         <section className="food-items">
           <div className="container">
             <div className="header-bar">
               <h2>More Meals</h2>
             </div>
-            <div className="card">
-              <img src="https://res.cloudinary.com/weezyval/image/upload/v1535674062/fastfood/amma-jamma-rodo-sauce.jpg" />
-              <h3>Amma Jamma Sauce</h3>
-              <p>₦600</p>
-              <p>
-                <span className="button-sm">Order Now</span>
-              </p>
+            <div
+              className="card"
+              data-name="Citizen Meal"
+              data-price={800}
+              data-id={4}
+              data-img="https://res.cloudinary.com/weezyval/image/upload/v1535674062/fastfood/image_1.jpg"
+            >
+              <img src="https://res.cloudinary.com/weezyval/image/upload/v1535674062/fastfood/image_1.jpg" />
+              <h3>Citizen Meal</h3>
+              <p>₦800</p>
+              <button className="button-sm">Order Now</button>
+            </div>
+            <div
+              className="card"
+              data-name="Citizen Meal"
+              data-price={800}
+              data-id={4}
+              data-img="https://res.cloudinary.com/weezyval/image/upload/v1535674062/fastfood/image_1.jpg"
+            >
+              <img src="https://res.cloudinary.com/weezyval/image/upload/v1535674062/fastfood/image_1.jpg" />
+              <h3>Citizen Meal</h3>
+              <p>₦800</p>
+              <button className="button-sm">Order Now</button>
+            </div>
+            <div
+              className="card"
+              data-name="Citizen Meal"
+              data-price={800}
+              data-id={4}
+              data-img="https://res.cloudinary.com/weezyval/image/upload/v1535674062/fastfood/image_1.jpg"
+            >
+              <img src="https://res.cloudinary.com/weezyval/image/upload/v1535674062/fastfood/image_1.jpg" />
+              <h3>Citizen Meal</h3>
+              <p>₦800</p>
+              <button className="button-sm">Order Now</button>
+            </div>
+            <div
+              className="card"
+              data-name="Citizen Meal"
+              data-price={800}
+              data-id={4}
+              data-img="https://res.cloudinary.com/weezyval/image/upload/v1535674062/fastfood/image_1.jpg"
+            >
+              <img src="https://res.cloudinary.com/weezyval/image/upload/v1535674062/fastfood/image_1.jpg" />
+              <h3>Citizen Meal</h3>
+              <p>₦800</p>
+              <button className="button-sm">Order Now</button>
+            </div>
+            <div
+              className="card"
+              data-name="Citizen Meal"
+              data-price={800}
+              data-id={4}
+              data-img="https://res.cloudinary.com/weezyval/image/upload/v1535674062/fastfood/image_1.jpg"
+            >
+              <img src="https://res.cloudinary.com/weezyval/image/upload/v1535674062/fastfood/image_1.jpg" />
+              <h3>Citizen Meal</h3>
+              <p>₦800</p>
+              <button className="button-sm">Order Now</button>
+            </div>
+            <div
+              className="card"
+              data-name="Citizen Meal"
+              data-price={800}
+              data-id={4}
+              data-img="https://res.cloudinary.com/weezyval/image/upload/v1535674062/fastfood/image_1.jpg"
+            >
+              <img src="https://res.cloudinary.com/weezyval/image/upload/v1535674062/fastfood/image_1.jpg" />
+              <h3>Citizen Meal</h3>
+              <p>₦800</p>
+              <button className="button-sm">Order Now</button>
             </div>
             <div className="card">
               <img src="https://res.cloudinary.com/weezyval/image/upload/v1535674062/fastfood/meat-pie.jpg" />
