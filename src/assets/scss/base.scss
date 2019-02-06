@@ -48,12 +48,13 @@ a:hover {
 .button-sm {
   background-color: #e8491d;
   width: 80px;
-  padding: 5px;
+  padding: 8px;
   text-align: center;
   border: 0;
   color: #ffffff;
   margin-right: 5px;
   margin-bottom: 10px;
+  cursor: pointer;
 }
 .button-sm a {
   color: #ffffff;
@@ -69,6 +70,7 @@ a:hover {
   text-align: center;
   margin: 20px auto 30px auto;
   border: 0;
+  cursor: pointer;
   color: #ffffff;
 }
 .button a {
@@ -181,6 +183,7 @@ header a:hover {
 }
 .food-items {
   margin-top: 20px;
+  min-height: calc(100vh - 190px);
 }
 
 .food-items .card {

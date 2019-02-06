@@ -1,16 +1,22 @@
 import React, { Component, Fragment } from 'react';
+import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 
 class Header extends Component {
-  state = {
-    body: ''
-  };
-
+  // constructor(props) {
+  //   super(props);
+  //   this.state = {
+  //     token: localStorage.getItem('fastFoodToken') || ''
+  //   };
+  // }
   logout = () => {
     localStorage.removeItem('fastFoodToken');
+    this.setState({
+      token: ''
+    });
   };
   render() {
-    this.token = localStorage.getItem('fastFoodToken');
+    this.token = localStorage.getItem('fastFoodToken') || '';
     return (
       <div>
         <header>
@@ -20,11 +26,11 @@ class Header extends Component {
             </div>
             <nav>
               <ul>
-                <li className="active">
+                <li>
                   <Link to="/">Home</Link>
                 </li>
                 <li>
-                  <Link to="users/cart.html">Cart</Link>
+                  <Link to="/cart">Cart ({this.props.totalItem})</Link>
                 </li>
                 <li id="userEmail">
                   <Link to="users/sign_in.html" />
@@ -53,4 +59,10 @@ class Header extends Component {
     );
   }
 }
-export default Header;
+const mapStateToProps = (state) => ({
+  ...state.cart
+});
+export default connect(
+  mapStateToProps,
+  null
+)(Header);

@@ -1,8 +1,8 @@
-import React from "react";
-import { withRouter } from "react-router-dom";
+import React from 'react';
+import { withRouter } from 'react-router-dom';
 const Footer = ({ location }) => {
   return (
-    <footer className={!/\/$/.test(location.pathname) ? "sticky" : ""}>
+    <footer className={!/\/(cart)?$/.test(location.pathname) ? 'sticky' : ''}>
       <p> Chops - Fast Food Delivery App | copyright © 2019</p>
     </footer>
   );

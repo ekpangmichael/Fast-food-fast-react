@@ -34,7 +34,7 @@ export const signinFailure = (payload) => ({
  * @param {*} user - user object to dispatch
  * @returns {fn} - signin dispatch function
  */
-export const signinUser = (user, history) => async (dispatch) => {
+export const signinUser = (user) => async (dispatch) => {
   const data = {
     ...user
   };
@@ -48,7 +48,7 @@ export const signinUser = (user, history) => async (dispatch) => {
     localStorage.setItem('fastFoodToken', res.data[1].token);
     console.log(res.data);
     dispatch(signinSuccess(res.data));
-    history.push('/');
+    window.location.href = '/';
   } catch (err) {
     dispatch(signinFailure(err));
   }
