@@ -62,9 +62,11 @@ export const deleteItemFromcart = (id) => async (dispatch) => {
  */
 export const placeOrder = (order) => async (dispatch) => {
   const data = {
-    userId: 1,
+    userId: JSON.parse(localStorage.getItem('userData'))[0].id,
     orders: order
   };
+
+  console.log(data);
   const token = localStorage.getItem('fastFoodToken');
   const headers = {
     authorization: token

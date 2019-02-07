@@ -21,7 +21,7 @@ class Cart extends Component {
         ? toast.error('Please login to place order', {
             position: toast.POSITION.TOP_CENTER
           })
-        : this.props.placeOrder(this.state.cart);
+        : this.props.placeOrder(this.props.cart);
     }
   };
   _deleteItem = (id) => {
