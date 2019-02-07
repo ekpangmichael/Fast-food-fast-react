@@ -7,6 +7,7 @@ import Header from '../components/header/Header';
 import Footer from '../components/footer/Footer';
 import store from '../store';
 import SignIn from '../components/signin/Signin';
+import Cart from '../components/cart/Cart';
 
 class App extends Component {
   render() {
@@ -19,6 +20,7 @@ class App extends Component {
               <Route path="/" exact component={HomePage} />
               <Route path="/signup" exact component={SignUp} />
               <Route path="/signin" exact component={SignIn} />
+              <Route path="/cart" exact component={Cart} />
               <Footer />
             </div>
           </BrowserRouter>
