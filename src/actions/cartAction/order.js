@@ -66,7 +66,6 @@ export const placeOrder = (order) => async (dispatch) => {
     orders: order
   };
 
-  console.log(data);
   const token = localStorage.getItem('fastFoodToken');
   const headers = {
     authorization: token

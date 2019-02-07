@@ -27,52 +27,105 @@ describe('Cart Reducers', () => {
     ).toBeCalled;
   });
 
-  // it('should updated response when signup success is called', () => {
-  //   expect(
-  //     reducer(
-  //       {
-  //         ...initialState
-  //       },
-  //       {
-  //         type: actionTypes.SIGNUP_USER_SUCCESS,
-  //         isLoading: false,
-  //         class: 'success',
-  //         payload: [{}, { message: true }]
-  //       }
-  //     )
-  //   ).toBeCalled;
-  // });
+  it('should update totalItem when type.CART_UPDATE is called ', () => {
+    expect(
+      reducer(
+        {
+          ...initialState
+        },
+        {
+          type: actionTypes.CART_UPDATE,
+          cart: JSON.parse(localStorage.getItem('cart'))
+        }
+      )
+    ).toBeCalled;
+  });
 
-  // it('should updated response when signup fail is called', () => {
-  //   expect(
-  //     reducer(
-  //       {
-  //         ...initialState
-  //       },
-  //       {
-  //         type: actionTypes.SIGNUP_USER_FAILURE,
-  //         error: true,
-  //         class: 'fail',
-  //         payload: {
-  //           response: {
-  //             data: [null, { message: 'fail' }]
-  //           }
-  //         }
-  //       }
-  //     )
-  //   ).toBeCalled;
-  // });
+  it('should delete item when type.DELETE_ITEM is called ', () => {
+    expect(
+      reducer(
+        {
+          ...initialState
+        },
+        {
+          type: actionTypes.DELETE_ITEM,
+          payload: '1',
+          totalItem: initialState.totalItem - 1
+        }
+      )
+    ).toBeCalled;
+  });
 
-  // it('should default to initial state when no actionType is supply', () => {
-  //   expect(
-  //     reducer(
-  //       {
-  //         ...initialState
-  //       },
-  //       {
-  //         type: actionTypes.FAKE_TYPE
-  //       }
-  //     )
-  //   ).toBeCalled;
-  // });
+  it('should update isLoading when type.ORDER_START is called ', () => {
+    expect(
+      reducer(
+        {
+          ...initialState
+        },
+        {
+          type: actionTypes.ORDER_START,
+          isLoading: true
+        }
+      )
+    ).toBeCalled;
+  });
+
+  it('should update response when type.ORDER_SUCCESS is called ', () => {
+    expect(
+      reducer(
+        {
+          ...initialState
+        },
+        {
+          type: actionTypes.ORDER_SUCCESS,
+          isLoading: false,
+          totalItem: 0,
+          cart: [],
+          response: true
+        }
+      )
+    ).toBeCalled;
+  });
+
+  it('should update response when type.UPDATE_RESPONSE is called ', () => {
+    expect(
+      reducer(
+        {
+          ...initialState
+        },
+        {
+          type: actionTypes.UPDATE_RESPONSE,
+          response: false
+        }
+      )
+    ).toBeCalled;
+  });
+
+  it('should update response when type.ORDER_FAIL is called ', () => {
+    expect(
+      reducer(
+        {
+          ...initialState
+        },
+        {
+          type: actionTypes.ORDER_FAIL,
+          isLoading: false,
+          payload: 'fail'
+        }
+      )
+    ).toBeCalled;
+  });
+
+  it('should default to initial state when no actionType is supply', () => {
+    expect(
+      reducer(
+        {
+          ...initialState
+        },
+        {
+          type: actionTypes.FAKE_TYPE
+        }
+      )
+    ).toBeCalled;
+  });
 });

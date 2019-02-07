@@ -44,6 +44,8 @@ export class SignIn extends Component {
                     id="email"
                     value={this.state.email}
                     onChange={this.onChange}
+                    minLength="2"
+                    maxLength="60"
                     required
                   />
                 </div>
@@ -55,6 +57,8 @@ export class SignIn extends Component {
                     id="password"
                     value={this.state.password}
                     onChange={this.onChange}
+                    minLength="2"
+                    maxLength="100"
                     required
                   />
                 </div>
@@ -89,7 +93,7 @@ export class SignIn extends Component {
     );
   }
 }
-const mapStateToProps = (state) => ({
+export const mapStateToProps = (state) => ({
   ...state.signin
 });
 export default connect(

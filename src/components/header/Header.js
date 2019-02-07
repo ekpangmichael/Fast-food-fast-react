@@ -2,13 +2,7 @@ import React, { Component, Fragment } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 
-class Header extends Component {
-  // constructor(props) {
-  //   super(props);
-  //   this.state = {
-  //     token: localStorage.getItem('fastFoodToken') || ''
-  //   };
-  // }
+export class Header extends Component {
   logout = () => {
     localStorage.removeItem('fastFoodToken');
     this.setState({
@@ -16,13 +10,15 @@ class Header extends Component {
     });
   };
   render() {
-    this.token = localStorage.getItem('fastFoodToken') || '';
+    const token = localStorage.getItem('fastFoodToken') || '';
     return (
       <div>
         <header>
           <div className="container">
             <div id="logo">
-              <img src="https://res.cloudinary.com/weezyval/image/upload/v1535674062/fastfood/logo.png" />
+              <Link to="/">
+                <img src="https://res.cloudinary.com/weezyval/image/upload/v1535674062/fastfood/logo.png" />
+              </Link>
             </div>
             <nav>
               <ul>
@@ -35,7 +31,7 @@ class Header extends Component {
                 <li id="userEmail">
                   <Link to="users/sign_in.html" />
                 </li>
-                {this.token ? (
+                {token ? (
                   <li id="logout">
                     <Link to="#" onClick={this.logout}>
                       logout
@@ -59,7 +55,7 @@ class Header extends Component {
     );
   }
 }
-const mapStateToProps = (state) => ({
+export const mapStateToProps = (state) => ({
   ...state.cart
 });
 export default connect(

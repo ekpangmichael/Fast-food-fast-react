@@ -12,7 +12,7 @@ export const signUpStart = () => ({
 /**
  * @description - Signup success actions
  * @param {*} payload - success response
- * @returns {object} - signup sucess action
+ * @returns {object} - signup success action
  */
 export const signUpSuccess = (payload) => ({
   type: actionTypes.SIGNUP_USER_SUCCESS,
