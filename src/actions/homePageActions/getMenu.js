@@ -12,7 +12,7 @@ export const loadMenuStart = () => ({
 /**
  * @description - loadMenu success actions
  * @param {*} payload - success response
- * @returns {object} - loadMenu sucess action
+ * @returns {object} - loadMenu success action
  */
 export const loadMenuSuccess = (payload) => ({
   type: actionTypes.LOAD_MENU_SUCCESS,

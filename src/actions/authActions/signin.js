@@ -12,7 +12,7 @@ export const signinStart = () => ({
 /**
  * @description - signin success actions
  * @param {*} payload - success response
- * @returns {object} - signin sucess action
+ * @returns {object} - signin success action
  */
 export const signinSuccess = (payload) => ({
   type: actionTypes.SIGNIN_USER_SUCCESS,
@@ -22,7 +22,7 @@ export const signinSuccess = (payload) => ({
 /**
  * @description - signin failure actions
  * @param {*} payload - failure response
- * @returns {object} - signin start action
+ * @returns {object} - signin failure
  */
 export const signinFailure = (payload) => ({
   type: actionTypes.SIGNIN_USER_FAILURE,

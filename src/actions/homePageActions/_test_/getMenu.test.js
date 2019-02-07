@@ -48,19 +48,4 @@ describe('Menu Actions', () => {
     await loadMenu()(dispatchFn);
     expect(dispatchFn).toBeCalled();
   });
-
-  // it('should call the placeorder dispatch function', async () => {
-  //   const fakeOder = {
-  //     name: faker.name.findName(),
-  //     price: faker.name.findName()
-  //   };
-  //   const mockResponse = {
-  //     message: 'Successfully logged in'
-  //   };
-
-  //   moxios.stubRequest(url, mockResponse);
-  //   await placeOrder(fakeOder)(dispatchFn);
-  //   expect(dispatchFn).toBeCalled();
-  //   expect(dispatchFn).toBeCalledWith({ type: type.ORDER_START });
-  // });
 });

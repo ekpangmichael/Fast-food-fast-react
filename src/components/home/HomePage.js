@@ -1,12 +1,10 @@
-
 import React, { Component, Fragment } from 'react';
 import { connect } from 'react-redux';
 import { toast } from 'react-toastify';
-import { Link } from 'react-router-dom';
 import { loadMenu } from '../../actions/homePageActions/getMenu';
 import { updateCount, updateCart } from '../../actions/cartAction/cart';
 import MenuLoader from '../../components/home/menuLoader/menuLoader';
-class HomePage extends Component {
+export class HomePage extends Component {
   constructor(props) {
     super(props);
     const storedCart = JSON.parse(localStorage.getItem('cart'));
@@ -97,7 +95,7 @@ class HomePage extends Component {
     );
   }
 }
-const mapStateToProps = (state) => ({
+export const mapStateToProps = (state) => ({
   ...state.menu
 });
 export default connect(

@@ -4,7 +4,7 @@ import { placeOrder, deleteItemFromcart } from '../../actions/cartAction/order';
 import { ClipLoader } from 'react-spinners';
 import { toast } from 'react-toastify';
 
-class Cart extends Component {
+export class Cart extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -18,7 +18,7 @@ class Cart extends Component {
     this.token = localStorage.getItem('fastFoodToken');
     {
       !this.token
-        ? toast.error('Please login to place order', {
+        ? toast.error('Please login to place your order', {
             position: toast.POSITION.TOP_CENTER
           })
         : this.props.placeOrder(this.props.cart);
@@ -36,7 +36,7 @@ class Cart extends Component {
           })
         : null;
     }
-    //const todayDate = new Date().toISOString().slice(0, 10);
+
     const cartItems = (this.props.cart || []).map(
       (item) => (
         (tp += parseInt(item.price)),
@@ -120,7 +120,7 @@ class Cart extends Component {
     );
   }
 }
-const mapStateToProps = (state) => ({
+export const mapStateToProps = (state) => ({
   ...state.cart
 });
 export default connect(
