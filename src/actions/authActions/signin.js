@@ -46,7 +46,6 @@ export const signinUser = (user) => async (dispatch) => {
     );
     localStorage.setItem('userData', JSON.stringify(res.data[2].rows));
     localStorage.setItem('fastFoodToken', res.data[1].token);
-    console.log(res.data);
     dispatch(signinSuccess(res.data));
     window.location.href = '/';
   } catch (err) {

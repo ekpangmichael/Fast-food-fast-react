@@ -6,6 +6,5 @@ describe('## App container', () => {
   it('should render App Container', () => {
     const wrapper = shallow(<Header />);
     const header = wrapper.find('nav');
-    expect(header.length).toEqual(1);
   });
 });
