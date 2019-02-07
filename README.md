@@ -1,6 +1,7 @@
 # Fast food fast - A fast food delivery app
 
-[![Build Status](https://travis-ci.org/ekpangmichael/Fast-food-fast-react.svg?branch=develop)](https://travis-ci.org/ekpangmichael/Fast-food-fast-react)[![Test Coverage](https://api.codeclimate.com/v1/badges/40b48934dc823c16259d/test_coverage)](https://codeclimate.com/github/ekpangmichael/Fast-food-fast-react/test_coverage)
+[![Build Status](https://travis-ci.org/ekpangmichael/Fast-food-fast-react.svg?branch=develop)](https://travis-ci.org/ekpangmichael/Fast-food-fast-react) [![Test Coverage](https://api.codeclimate.com/v1/badges/40b48934dc823c16259d/test_coverage)](https://codeclimate.com/github/ekpangmichael/Fast-food-fast-react/test_coverage)
+
 
 ## Getting Started
 
