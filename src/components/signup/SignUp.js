@@ -36,19 +36,6 @@ export class SignUp extends Component {
     this.props.signUpUser(userData);
   };
 
-  // /**
-  //  * @description - decides if component should throw error or update
-  //  * @param {object} nextProps - react next prop to target next prop
-  //  * @returns {bool} - if the component should be updated or not
-  //  */
-  // shouldComponentUpdate(nextProps) {
-  //   if (this.props.error !== nextProps.error) {
-  //     toast.error(`${nextProps.response}`);
-  //     return true;
-  //   }
-  //   return true;
-  // }
-
   render() {
     return (
       <Fragment>
@@ -157,7 +144,7 @@ export class SignUp extends Component {
     );
   }
 }
-const mapStateToProps = (state) => ({
+export const mapStateToProps = (state) => ({
   ...state.signup
 });
 export default connect(

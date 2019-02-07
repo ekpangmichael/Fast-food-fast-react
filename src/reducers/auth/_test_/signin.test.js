@@ -10,7 +10,7 @@ describe('Signin Reducers', () => {
     class: null
   };
 
-  it('should update response  when  sigin success is called', () => {
+  it('should update response when sigin success is called', () => {
     expect(
       reducer(
         {
@@ -46,7 +46,7 @@ describe('Signin Reducers', () => {
     ).toBeCalled;
   });
 
-  it('should update isLoading when  signin start is called', () => {
+  it('should update isLoading when signin start is called', () => {
     expect(
       reducer(
         {
