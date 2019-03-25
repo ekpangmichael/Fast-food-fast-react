@@ -12,7 +12,6 @@ pipeline {
         stage('Build') {
             steps {
                 sh 'npm install'
-                input message: 'Should i run test? (Click "Proceed" to continue)'
             }
         }
         stage('Test') { 
@@ -22,8 +21,10 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                input message: 'Should i run test? (Click "Proceed" to continue)'
+                input message: 'Do you want to deploy the application? (Click "Proceed" to continue)'
                  sh './jenkins/scripts/deploy.sh' 
+                 input message: 'Shutdown the app? (Click "Proceed" to continue)'
+                 sh './jenkins/scripts/kill.sh' 
             }
         }
     }
