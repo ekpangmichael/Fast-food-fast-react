@@ -20,5 +20,11 @@ pipeline {
                 sh './jenkins/scripts/test.sh' 
             }
         }
+        stage('Deploy') {
+            steps {
+                input message: 'Should i run test? (Click "Proceed" to continue)'
+                 sh './jenkins/scripts/deploy.sh' 
+            }
+        }
     }
 }
